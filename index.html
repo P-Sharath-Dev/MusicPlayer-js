@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/c4ce25e6d7.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="songs"> -->
+    <title>MUSIC PLAYER PROJECT</title>
+</head>
+<body>
+    <section class="container"> 
+        <section class="header">
+            <div class="title">
+                <h1>ONLINE MUSIC PLAYER</h1>
+            </div>
+            <div class="toggle-theme"></div>
+        </section>
+
+        <section class="container-body" id="container-body"> 
+
+
+            <!-- Dropdown part  -->
+            <section class="dropDown-container">
+
+                <div class="dropdown">
+                    <label for="" class="label">Filter by genre : </label>
+                    <select name="" id="selectDropDown">
+                        <option value="All" id="allSongs" selected>All</option>
+                        <option value="Pop" id="pop">Pop</option>
+                        <option value="Rock" id="rock">Rock</option>
+                        <option value="Hip Hop" id="hipHop">Hip Hop</option>
+                    </select>
+
+                    <h1>All Songs</h1>
+                </div>
+    
+                <!-- Songs display area -->
+                 <div class="all-songs-div">
+                    
+                </div>
+
+            </section>
+
+            <!-- middle part -->
+            <section class="Music-container">
+                <div class="music-player"> 
+                    <img src="" alt="" class="song-img" id="song-img">
+                    <h1 id="title" class="title">Despacito</h1>
+                    <p id="artist" class="artist">luis fonsi ft. </p>
+        
+                    <audio id="audioFile" src="" type="audio/mpeg"  controls>
+                    </audio>
+
+                    <input type="range" value="0" id="progress">
+        
+                    <div class="controls">
+                        <div id="previousSong"><i class="fa-solid fa-backward"></i></div>
+                        <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                        <div  id="nextSong"><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                </div>
+                <div class="addPlayListButtonDiv">
+                    <p class="addPlayListButton">Add to playList</p>
+                </div>
+            </section>
+            
+            <!-- right part -->
+
+            <section class="playLIst-container">
+
+                <div class="takingInput">
+                    <input type="text" placeholder="Enter Playlist Name" id="playListName">
+                    <label for="" id="createPlaylist">Create playlist</label>
+                </div>
+
+                <div class="playListDiv" id="playListDiv">
+                    <div class="currentPlayList" id="currentPlayList">
+                        <h2>Currnet playlist</h2>
+                        <div class="all-songs-div" id="currentPlayList-songs-div">
+                    
+                        </div>
+                    </div>
+                    <div class="allPlayList" id="allPlayList">
+                        <h2>All playlists</h2>
+                        <div class="all-songs-div" id="allPlayList-songs-div">
+                    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
